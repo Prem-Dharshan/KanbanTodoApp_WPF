@@ -1,0 +1,21 @@
+﻿<Window x:Class="TodoApp1.Views.AddTodoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add New Todo" Height="250" Width="400" WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20" VerticalAlignment="Center">
+        <TextBlock Text="Title:" />
+        <TextBox x:Name="TitleBox" Margin="0 5"/>
+
+        <TextBlock Text="Description:" />
+        <TextBox x:Name="DescriptionBox" Margin="0 5"/>
+
+        <TextBlock Text="Status:" />
+        <ComboBox x:Name="StatusBox" Margin="0 5" SelectedIndex="0">
+            <ComboBoxItem Content="Todo"/>
+            <ComboBoxItem Content="InProgress"/>
+            <ComboBoxItem Content="Done"/>
+        </ComboBox>
+
+        <Button Content="Add" Margin="0 10 0 0" Width="100" HorizontalAlignment="Center" Click="Add_Click"/>
+    </StackPanel>
+</Window>
