@@ -48,7 +48,8 @@
             </Grid.ColumnDefinitions>
 
             <!-- Column 0: Todo -->
-            <StackPanel Grid.Column="0">
+            <ScrollViewer Grid.Column="0">
+            <StackPanel>
                 <TextBlock Text="To Do" FontWeight="Bold" FontSize="18" Margin="10" />
                 <ItemsControl ItemsSource="{Binding TodoItems}">
                     <ItemsControl.ItemTemplate>
@@ -72,9 +73,11 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
-
+            </ScrollViewer>
+            
             <!-- Column 1: In Progress -->
-            <StackPanel Grid.Column="1">
+            <ScrollViewer Grid.Column="1">
+            <StackPanel>
                 <TextBlock Text="In Progress" FontWeight="Bold" FontSize="18" Margin="10" />
                 <ItemsControl ItemsSource="{Binding InProgressItems}">
                     <ItemsControl.ItemTemplate>
@@ -101,9 +104,11 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
-
+            </ScrollViewer>
+            
             <!-- Column 2: Done -->
-            <StackPanel Grid.Column="2">
+            <ScrollViewer Grid.Column="2">
+            <StackPanel>
                 <TextBlock Text="Done" FontWeight="Bold" FontSize="18" Margin="10" />
                 <ItemsControl ItemsSource="{Binding DoneItems}">
                     <ItemsControl.ItemTemplate>
@@ -127,6 +132,7 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>
